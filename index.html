@@ -9,7 +9,7 @@
 <meta name="author" content="Mridul Mantri and Khushi Taxak">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0B2340">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/branding/stratex_favicon.png">
 <link rel="canonical" href="https://YOUR_GITHUB_USERNAME.github.io/stratex/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Stratex | Market, Product and Growth Strategy">
@@ -93,9 +93,19 @@ a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{o
 /* header */
 header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{max-width:var(--max);height:76px;margin:0 auto;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;gap:28px}
-.wordmark{display:flex;align-items:center;text-decoration:none;font-weight:700;letter-spacing:-.04em;font-size:22px;color:var(--navy)}
-.wordmark .ex{color:var(--copper)}
-.wordmark .slash{display:inline-block;width:18px;height:2px;background:var(--copper);margin-left:8px;transform:rotate(-42deg);transform-origin:center}
+.wordmark{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+    transform:translateX(-45px);
+
+}
+
+.wordmark img{
+    height:73px;
+    width:auto;
+    display:block;
+}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{text-decoration:none;font-size:13.5px;font-weight:500;color:#394651;position:relative}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:-7px;width:100%;height:1.5px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .2s ease}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
@@ -187,7 +197,10 @@ section{padding:clamp(76px,8vw,118px) 0}
 /* footer */
 footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(--line-dark)}
 .footer{max-width:var(--max);margin:0 auto;padding:28px var(--pad);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer strong{color:#fff;font-size:14px}.footer small{display:block;margin-top:2px;font-size:11px}.footer-nav{display:flex;gap:18px;flex-wrap:wrap}.footer-nav a{font-size:11.5px;color:rgba(255,255,255,.6);text-decoration:none}.footer-nav a:hover{color:#fff}
-
+.footer-logo{
+    width:240px;
+    height:auto;
+}
 /* modal */
 .modal-overlay{position:fixed;inset:0;z-index:500;display:grid;place-items:center;padding:20px;background:rgba(7,24,43,.76);backdrop-filter:blur(7px)}.modal-overlay[hidden]{display:none}
 .modal{width:min(470px,100%);background:#fff;padding:34px 30px 28px;position:relative;box-shadow:0 35px 90px rgba(0,0,0,.32)}.modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border:1px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}.modal h3{font-size:31px;margin:11px 0 10px;color:var(--navy)}.modal-sub{font-size:14px;margin-bottom:22px}.modal label{display:block;margin-bottom:14px;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.modal input{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid var(--line);background:var(--off);color:var(--ink);font-family:var(--sans);font-size:14.5px}.modal input.err{border-color:#A93D2A}.modal form .btn{width:100%;margin-top:4px}.form-note,.form-error{margin-top:12px;text-align:center;font-size:11px}.form-error{color:#A93D2A}.modal-success{text-align:center;padding:8px 0}.tick{width:46px;height:46px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;margin:0 auto 14px}.modal-success p{font-size:13.5px}
@@ -211,7 +224,9 @@ footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(-
 <a class="skip" href="#main">Skip to content</a>
 <header>
   <nav class="nav" aria-label="Primary">
-    <a class="wordmark" href="#home" aria-label="Stratex home">STRAT<span class="ex">EX</span></a>
+    <a class="wordmark" href="#home" aria-label="Stratex home">
+        <img src="assets/branding/stratex_full_h.png" alt="Stratex">
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#approach">Approach</a></li>
@@ -384,13 +399,16 @@ footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(-
 
 <section class="contact" id="contact" aria-labelledby="contact-title">
   <div class="wrap contact-grid">
-    <div class="reveal"><span class="eyebrow">Start with the question</span><h2 id="contact-title">Have a decision you want to pressure-test?</h2><p class="lead">Send the context, the question and the timing. We can start there.</p><div class="contact-meta"><a href="mailto:mridul.mantri@iitb.ac.in">mridul.mantri@iitb.ac.in</a><a href="tel:+916375028382">+91 63750 28382</a><a href="https://linkedin.com/in/mridul-mantri" target="_blank" rel="noopener">Mridul on LinkedIn</a><a href="https://www.linkedin.com/in/khushi-taxak" target="_blank" rel="noopener">Khushi on LinkedIn</a></div></div>
-    <div class="contact-actions reveal"><a class="btn btn-light" href="https://cal.id/mridul-mantri" target="_blank" rel="noopener">Book a Conversation <span>→</span></a><a class="btn btn-dark-line" href="https://wa.me/916375028382" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div class="reveal"><span class="eyebrow">Start with the question</span><h2 id="contact-title">Have a decision you want to pressure-test?</h2><p class="lead">Send the context, the question and the timing. We can start there.</p><div class="contact-meta"><a href="mailto:mridul@stratexadvisory.in">mridul@stratexadvisory.in</a><a href="https://linkedin.com/in/mridul-mantri" target="_blank" rel="noopener">Mridul on LinkedIn</a><a href="https://www.linkedin.com/in/khushi-taxak" target="_blank" rel="noopener">Khushi on LinkedIn</a></div></div>
+    <div class="contact-actions reveal"><a class="btn btn-light" href="https://cal.id/mridul-mantri" target="_blank" rel="noopener">Book a Conversation <span>→</span></a>
   </div>
 </section>
 </main>
 
-<footer><div class="footer"><div><strong>STRAT<span style="color:#B85C32">EX</span></strong><small>Market, product and growth strategy.</small></div><nav class="footer-nav" aria-label="Footer"><a href="#capabilities">Capabilities</a><a href="#approach">Approach</a><a href="#founders">Founders</a><a href="#contact">Contact</a></nav><small>© <span id="yr">2026</span> Stratex</small></div></footer>
+<footer><div class="footer"><div><img 
+src="assets/branding/stratex_footer_dark.png"
+alt="Stratex"
+class="footer-logo"></div><nav class="footer-nav" aria-label="Footer"><a href="#capabilities">Capabilities</a><a href="#approach">Approach</a><a href="#founders">Founders</a><a href="#contact">Contact</a></nav><small>© <span id="yr">2026</span> Stratex</small></div></footer>
 
 <div class="modal-overlay" id="sampleModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
   <div class="modal">
