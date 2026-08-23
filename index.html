@@ -269,7 +269,7 @@ footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(-
           <div class="console-question" id="consoleQuestion">Where should we play?</div>
           <p class="console-copy" id="consoleCopy">Find the segment, geography or customer group where the evidence makes the strongest case for focus.</p>
         </div>
-        <div class="console-output"><span>Typical output</span><strong id="consoleOutput">Market map + segment priority + entry recommendation</strong></div>
+        <div class="console-output"><span>Typical output</span><strong id="consoleOutput">Market map • Segment priority • Entry recommendation</strong></div>
       </aside>
     </div>
   </div>
@@ -445,9 +445,9 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 // Hero decision navigator
 const decisions={
-  market:{kicker:'Market strategy',question:'Where should we play?',copy:'Find the segment, geography or customer group where the evidence makes the strongest case for focus.',output:'Market map + segment priority + entry recommendation'},
-  product:{kicker:'Product strategy',question:'What should we build?',copy:'Turn customer needs, pain points and willingness to pay into a sharper product and offer.',output:'Discovery evidence + use case priority + product roadmap'},
-  growth:{kicker:'Growth strategy',question:'How should we grow?',copy:'Design a clearer path from product to demand, revenue and repeatability.',output:'Positioning + pricing + channels + GTM motion'}
+  market:{kicker:'Market strategy',question:'Where should we play?',copy:'Find the segment, geography or customer group where the evidence makes the strongest case for focus.',output:'Market map • Segment priority • Entry recommendation'},
+  product:{kicker:'Product strategy',question:'What should we build?',copy:'Turn customer needs, pain points and willingness to pay into a sharper product and offer.',output:'Discovery evidence .• Use case priority • Product roadmap'},
+  growth:{kicker:'Growth strategy',question:'How should we grow?',copy:'Design a clearer path from product to demand, revenue and repeatability.',output:'Positioning • Pricing • Channels • GTM motion'}
 };
 document.querySelectorAll('.decision-tab').forEach(btn=>btn.addEventListener('click',()=>{
   document.querySelectorAll('.decision-tab').forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-selected',String(b===btn))});
