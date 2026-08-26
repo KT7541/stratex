@@ -262,11 +262,11 @@ footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(-
           <a class="btn btn-primary" href="https://cal.id/mridul-mantri" target="_blank" rel="noopener">Start a Conversation <span aria-hidden="true">→</span></a>
           <a class="btn btn-line open-sample" href="#sampleModal">Request Sample Work</a>
         </div>
-        <div class="hero-proof">
+        <!-- <div class="hero-proof">
           <span class="mark">01</span>
           <p><strong>Direct founder involvement.</strong> Mridul and Khushi stay close to the work from the first question through the recommendation.</p>
         </div>
-      </div>
+      </div> -->
 
       <aside class="decision-console reveal" aria-label="Interactive decision navigator">
         <span class="console-label">Explore the decision</span>
@@ -496,7 +496,7 @@ document.querySelectorAll('.open-sample').forEach(el=>el.addEventListener('click
 form.addEventListener('submit',async e=>{e.preventDefault();fError.hidden=true;const name=fName.value.trim(),email=fEmail.value.trim(),emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);fName.classList.toggle('err',!name);fEmail.classList.toggle('err',!emailOk);if(!name||!emailOk)return;fSubmit.disabled=true;fSubmit.textContent='Sending...';const payload={name,email,sample:'Stratex strategy engagement sample',reportLink:REPORT_LINK};
   async function viaApps(){const r=await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(payload)});const o=await r.json().catch(()=>({ok:r.ok}));if(!r.ok||o.ok===false)throw new Error('Apps Script failed')}
   async function viaForm(){const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({...payload,_subject:'Stratex strategy sample request - '+name,_template:'table',_captcha:'false',_autoresponse:'Hi '+name+',\n\nHere is the Stratex strategy engagement sample you requested: '+REPORT_LINK+'\n\nIt shows how customer discovery, market mapping and prioritisation can be used to define an ICP, product roadmap and GTM plan.\n\nBook a conversation: https://cal.id/mridul-mantri\n\nMridul Mantri and Khushi Taxak\nCo-founders, Stratex\nIIT Bombay'})});if(!r.ok)throw new Error('FormSubmit failed')}
-  try{if(APPS_SCRIPT_URL){try{await viaApps()}catch(err){await viaForm()}}else{await viaForm()}formView.hidden=true;successView.hidden=false}catch(err){fError.textContent='Could not send the request. Please email mridul.mantri@iitb.ac.in.';fError.hidden=false;fSubmit.disabled=false;fSubmit.innerHTML='Email Me the Sample <span>→</span>'}
+  try{if(APPS_SCRIPT_URL){try{await viaApps()}catch(err){await viaForm()}}else{await viaForm()}formView.hidden=true;successView.hidden=false}catch(err){fError.textContent='Could not send the request. Please email mridul.mantri@iitb.ac.in .';fError.hidden=false;fSubmit.disabled=false;fSubmit.innerHTML='Email Me the Sample <span>→</span>'}
 });
 </script>
 </body>
