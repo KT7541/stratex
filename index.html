@@ -30,7 +30,7 @@
   "name": "Stratex",
   "description": "Independent strategy advisory for market, product and growth decisions.",
   "url": "https://YOUR_GITHUB_USERNAME.github.io/stratex/",
-  "email": "mridul.mantri@iitb.ac.in",
+  "email": "mridul@stratexadvisory.in",
   "telephone": "+916375028382",
   "areaServed": "IN",
   "founder": [
@@ -369,9 +369,9 @@ footer{background:#07182B;color:rgba(255,255,255,.56);border-top:1px solid var(-
     </div>
     <div class="work-grid">
       <article class="work-card reveal"><span class="tag">PMF + GTM</span><h3>Find the right customer and route to market.</h3><p>Customer evidence, ICP, positioning, pricing and launch choices.</p><a href="https://cal.id/mridul-mantri" target="_blank" rel="noopener">Discuss scope <span>→</span></a></article>
-      <article class="work-card reveal"><span class="tag">Market discovery</span><h3>Test a market before committing to it.</h3><p>Market map, competitor view, buyer evidence and entry recommendation.</p><a href="mailto:mridul.mantri@iitb.ac.in?subject=Market%20discovery%20-%20Stratex">Share the question <span>→</span></a></article>
+      <article class="work-card reveal"><span class="tag">Market discovery</span><h3>Test a market before committing to it.</h3><p>Market map, competitor view, buyer evidence and entry recommendation.</p><a href="mailto:mridul@stratexadvisory.in?subject=Market%20discovery%20-%20Stratex">Share the question <span>→</span></a></article>
       <article class="work-card reveal"><span class="tag">Product strategy</span><h3>Turn customer insight into product priorities.</h3><p>Use cases, willingness to pay, roadmap choices and offer design.</p><a href="https://cal.id/mridul-mantri" target="_blank" rel="noopener">Pressure-test the product <span>→</span></a></article>
-      <article class="work-card reveal"><span class="tag">Strategic advisory</span><h3>Keep a thinking partner close to the team.</h3><p>Ongoing support on market, product, pricing and growth decisions.</p><a href="mailto:mridul.mantri@iitb.ac.in?subject=Strategic%20advisory%20-%20Stratex">Start a conversation <span>→</span></a></article>
+      <article class="work-card reveal"><span class="tag">Strategic advisory</span><h3>Keep a thinking partner close to the team.</h3><p>Ongoing support on market, product, pricing and growth decisions.</p><a href="mailto:mridul@stratexadvisory.in?subject=Strategic%20advisory%20-%20Stratex">Start a conversation <span>→</span></a></article>
     </div>
 
     <div class="sample-band reveal">
@@ -425,7 +425,7 @@ class="footer-logo"></div><nav class="footer-nav" aria-label="Footer"><a href="#
   <div class="modal">
     <button class="modal-close" id="modalClose" aria-label="Close dialog">✕</button>
     <div id="modalFormView"><span class="eyebrow">Sample strategy engagement</span><h3 id="modalTitle">See how a Stratex engagement is structured.</h3><p class="modal-sub">Share your details and we will send the one-page sample by email.</p><form id="sampleForm" novalidate><label>Your name<input type="text" name="name" id="fName" autocomplete="name" required></label><label>Work email<input type="email" name="email" id="fEmail" autocomplete="email" required></label><button class="btn btn-primary" type="submit" id="fSubmit">Email Me the Sample <span>→</span></button><p class="form-error" id="fError" hidden></p><p class="form-note">One email with the sample. Nothing else.</p></form></div>
-    <div class="modal-success" id="modalSuccessView" hidden><div class="tick">✓</div><h3>Check your inbox.</h3><p>The sample has been sent. If it does not arrive, write to <a href="mailto:mridul.mantri@iitb.ac.in">mridul.mantri@iitb.ac.in</a>.</p></div>
+    <div class="modal-success" id="modalSuccessView" hidden><div class="tick">✓</div><h3>Check your inbox.</h3><p>The sample has been sent. If it does not arrive, write to <a href="mailto:mridul@stratexadvisory.in">mridul@stratexadvisory.in</a>.</p></div>
   </div>
 </div>
 
@@ -487,7 +487,7 @@ document.querySelectorAll('.experience-toggle').forEach(btn=>btn.addEventListene
 
 // Sample request modal
 const APPS_SCRIPT_URL='https://script.google.com/macros/s/AKfycbzNvDDqmRqb39_FqWzV7rAIzL3yPTer5gPNyh_bHcoRhTTjVEtvIvIVmak86gmGHzJQ/exec';
-const FORM_ENDPOINT='https://formsubmit.co/ajax/mridul.mantri@iitb.ac.in';
+const FORM_ENDPOINT='https://formsubmit.co/ajax/mridul@stratexadvisory.in';
 const REPORT_LINK='https://drive.google.com/file/d/1oaGtk-PNK-EtCl88MjsPoQwYg0B_Ge3Z/view?usp=sharing';
 const modal=document.getElementById('sampleModal'),formView=document.getElementById('modalFormView'),successView=document.getElementById('modalSuccessView'),form=document.getElementById('sampleForm'),fName=document.getElementById('fName'),fEmail=document.getElementById('fEmail'),fSubmit=document.getElementById('fSubmit'),fError=document.getElementById('fError');let lastFocus=null;
 function openModal(e){if(e)e.preventDefault();lastFocus=document.activeElement;modal.hidden=false;document.body.style.overflow='hidden';formView.hidden=false;successView.hidden=true;fSubmit.disabled=false;fSubmit.innerHTML='Email Me the Sample <span>→</span>';fError.hidden=true;setTimeout(()=>fName.focus(),0)}
@@ -496,7 +496,7 @@ document.querySelectorAll('.open-sample').forEach(el=>el.addEventListener('click
 form.addEventListener('submit',async e=>{e.preventDefault();fError.hidden=true;const name=fName.value.trim(),email=fEmail.value.trim(),emailOk=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);fName.classList.toggle('err',!name);fEmail.classList.toggle('err',!emailOk);if(!name||!emailOk)return;fSubmit.disabled=true;fSubmit.textContent='Sending...';const payload={name,email,sample:'Stratex strategy engagement sample',reportLink:REPORT_LINK};
   async function viaApps(){const r=await fetch(APPS_SCRIPT_URL,{method:'POST',body:JSON.stringify(payload)});const o=await r.json().catch(()=>({ok:r.ok}));if(!r.ok||o.ok===false)throw new Error('Apps Script failed')}
   async function viaForm(){const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({...payload,_subject:'Stratex strategy sample request - '+name,_template:'table',_captcha:'false',_autoresponse:'Hi '+name+',\n\nHere is the Stratex strategy engagement sample you requested: '+REPORT_LINK+'\n\nIt shows how customer discovery, market mapping and prioritisation can be used to define an ICP, product roadmap and GTM plan.\n\nBook a conversation: https://cal.id/mridul-mantri\n\nMridul Mantri and Khushi Taxak\nCo-founders, Stratex\nIIT Bombay'})});if(!r.ok)throw new Error('FormSubmit failed')}
-  try{if(APPS_SCRIPT_URL){try{await viaApps()}catch(err){await viaForm()}}else{await viaForm()}formView.hidden=true;successView.hidden=false}catch(err){fError.textContent='Could not send the request. Please email mridul.mantri@iitb.ac.in .';fError.hidden=false;fSubmit.disabled=false;fSubmit.innerHTML='Email Me the Sample <span>→</span>'}
+  try{if(APPS_SCRIPT_URL){try{await viaApps()}catch(err){await viaForm()}}else{await viaForm()}formView.hidden=true;successView.hidden=false}catch(err){fError.textContent='Could not send the request. Please email mridul@stratexadvisory.in .';fError.hidden=false;fSubmit.disabled=false;fSubmit.innerHTML='Email Me the Sample <span>→</span>'}
 });
 </script>
 </body>
